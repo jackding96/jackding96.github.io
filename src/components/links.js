@@ -4,9 +4,14 @@ import linksStyles from "./links.module.css"
 export default () => (<div>
   <div className={linksStyles.container}>
     <ul>
-      <li>
-        <a onClick={emailClickHandler}>Email</a>
-      </li>
+      <div>
+        <li className={linksStyles.email}>
+          <a onClick={emailClickHandler}>Email</a>
+        </li>
+        <li id="test" className={linksStyles.copied}>
+          <div>Copied!</div>
+        </li>        
+      </div>
       <li>
         <a href='https://github.com/jackding96' target="_blank">GitHub</a>
       </li>
@@ -18,8 +23,10 @@ export default () => (<div>
 </div>);
 
 function emailClickHandler(e) {
-  e.target.text = 'Copied!';
-  e.target.style.color = '#FFA726'
+  e.target.style.marginTop = '-10px';
+  e.target.style.opacity = 0;
+  document.getElementById('test').style.opacity=1;
+  document.getElementById('test').style.marginTop='-44px';
   copyToClipboard('jackding.yj@gmail.com');
 }
 
