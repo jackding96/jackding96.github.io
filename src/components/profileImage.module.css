@@ -1,6 +1,59 @@
-img {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.profImg {
   width: 50px;
+  height: 50px;
+
+  background-image: url("../../public/static/me.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
   border-radius: 50%;
-  padding: 1px;
   border: 3px solid rgba(255,45,85, 0.7);
+  position: absolute;
+
+  animation: changeImg 12s infinite;
+}
+@-webkit-keyframes changeImg {
+  0% { 
+    width: 50px;
+    height: 50px;
+    background-image: url("../../public/static/memoji.png");
+  }
+  40% {
+    width: 50px;
+    height: 50px;
+    background-image: url("../../public/static/memoji.png");
+  }
+  45% {
+    width: 5px;
+    height: 5px;   
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+    background-image: url("../../public/static/me.jpg");   
+  }
+
+  90% {
+    width: 50px;
+    height: 50px;
+    background-image: url("../../public/static/me.jpg");   
+  }
+  95% {
+    width: 5px;
+    height: 5px;   
+  }
+  100% {
+    width: 50px;
+    height: 50px;   
+    background-image: url("../../public/static/memoji.png");    
+  }
 }
