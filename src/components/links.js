@@ -2,31 +2,22 @@ import React from "react"
 import linksStyles from "./links.module.css"
 
 export default () => (<div>
+
   <div className={linksStyles.container}>
-    <ul>
-      <div>
-        <li className={linksStyles.email}>
-          <a onClick={emailClickHandler}>Email</a>
-        </li>
-        <li id="test" className={linksStyles.copied}>
-          <div>Copied!</div>
-        </li>        
-      </div>
-      <li>
-        <a href='https://github.com/jackding96' target="_blank">GitHub</a>
-      </li>
-      <li>
-        <a href='https://www.linkedin.com/in/jack-ding-63236bb4/' target="_blank">LinkedIn</a>
-      </li>
-    </ul>
+    <div className={linksStyles.linkContainer}>
+      <a onClick={emailClickHandler}>Email</a>
+    </div>    
+    <div className={linksStyles.linkContainer}>
+      <a href='https://github.com/jackding96' target="_blank">GitHub</a>
+    </div>
+    <div className={linksStyles.linkContainer}>
+      <a href='https://www.linkedin.com/in/jack-ding-63236bb4/' target="_blank">LinkedIn</a>
+    </div>
   </div>
+
 </div>);
 
 function emailClickHandler(e) {
-  e.target.style.marginTop = '-10px';
-  e.target.style.opacity = 0;
-  document.getElementById('test').style.opacity=1;
-  document.getElementById('test').style.marginTop='-44px';
   copyToClipboard('jackding.yj@gmail.com');
 }
 

@@ -17,3 +17,7 @@ html {
   padding: 0px;
   margin: 0px;  
 }
+
+.highlight {
+  color: rgb(255,45,85);
+}

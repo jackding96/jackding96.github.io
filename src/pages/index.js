@@ -5,8 +5,8 @@ import ProfileImage from "../components/profileImage.js"
 export default () => (<div>
   <ProfileImage/>
 
-  <div>Jack Ding is a Software Developer.</div>
-  <div>Previously at Lyft, Rangle.IO, and IBM Cloud.</div>
+  <div><span className={'highlight'}>Jack Ding</span> is a Software Developer.</div>
+  <div>Previously at <span className={'highlight'}>Lyft</span>, <span className={'highlight'}>Rangle.IO</span>, and <span className={'highlight'}>IBM Cloud</span>.</div>
   <div>Loves Coffee.</div>
 
   <Links/>
