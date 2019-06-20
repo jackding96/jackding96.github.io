@@ -16,5 +16,5 @@
 .after {
   opacity: 0;
   top: -40px;
-  transition: opacity 0.3s, top 0.3s ease 1s;
+  transition: opacity 0.3s, top 0.3s ease 1.5s;
 }
