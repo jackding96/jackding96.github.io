@@ -4,31 +4,31 @@ import wordCarouselStyles from "./wordCarousel.module.css"
 class WordCarousel extends React.Component {
   constructor(props) {
     super(props);
+    this.dir = this.props.slideFrom == "above" ? wordCarouselStyles.above : wordCarouselStyles.below;
     this.state = {
       firstPos: wordCarouselStyles.current,
       firstText: '',
-      secondPos: wordCarouselStyles.after,
+      secondPos: this.dir,
       secondText: '',
     };
-    this.list = props.words
     this.i = 0;
     this.current = 1;
 
     this.changeTitle = this.changeTitle.bind(this);
   }
   componentDidMount() {
-    this.setState({firstText: this.list[this.i]});
+    this.setState({firstText: this.props.words[this.i]});
     setInterval(this.changeTitle, 3000);
   }
   changeTitle() {
-    this.setState({secondPos: this.state.secondPos == wordCarouselStyles.current ? wordCarouselStyles.after : wordCarouselStyles.current})
-    this.setState({firstPos: this.state.firstPos == wordCarouselStyles.current ? wordCarouselStyles.after : wordCarouselStyles.current})
+    this.setState({secondPos: this.state.secondPos == wordCarouselStyles.current ? this.dir : wordCarouselStyles.current})
+    this.setState({firstPos: this.state.firstPos == wordCarouselStyles.current ? this.dir : wordCarouselStyles.current})
     
     this.i++;
     if (this.current == 1) { // Currently, "first" is the current, "second" is moving in
-      this.setState({ secondText : this.list[this.i % this.list.length] });
+      this.setState({ secondText : this.props.words[this.i % this.props.words.length] });
     } else { // Currently, "second" is the current, "first" is moving in
-      this.setState({ firstText: this.list[this.i % this.list.length] });
+      this.setState({ firstText: this.props.words[this.i % this.props.words.length] });
     }
     this.current = this.current*-1;
     

@@ -16,8 +16,13 @@
   top: 0px;
   transition: all 0.3s;
 }
-.after {
+.above {
   opacity: 0;
   top: -40px;
+  transition: opacity 0.3s, top 0.3s ease 1.5s;
+}
+.below {
+  opacity: 0;
+  top: 40px;
   transition: opacity 0.3s, top 0.3s ease 1.5s;
 }
