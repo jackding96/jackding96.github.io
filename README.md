@@ -1,6 +1,4 @@
 TODO:
-- Gradients based on time of day?
+- Gradients based on time of day? Gradients around border animating
 - Get the 'copied' confirmation done
-- Get the profile header images to switch
 - Get Domain name done
-- 

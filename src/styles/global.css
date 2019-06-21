@@ -1,4 +1,7 @@
 html {
+  border: 8px solid rgb(0,122,255);
+  box-sizing: border-box;
+
   width: 100vw;
   height: 100vh;
 
@@ -19,5 +22,5 @@ html {
 }
 
 .highlight {
-  color: rgb(255,45,85);
+  color: rgb(0,122,255);
 }
