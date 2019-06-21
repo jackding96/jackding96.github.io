@@ -5,19 +5,20 @@ class WordCarousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 1,
-      list: ['a','b','c','d'],
       firstPos: wordCarouselStyles.current,
       firstText: '',
       secondPos: wordCarouselStyles.after,
       secondText: '',
     };
+
+    this.list = ['Software Engineer.', 'Code Connoisseur.', 'Technology Templar.', 'Binary Bandit.', 'Programming Pirate.', 'Algorithm Antihero.', 'Design Darth Vadar.', 'HPC Heavyweight.'];
     this.i = 0;
     this.current = 1;
+
     this.changeTitle = this.changeTitle.bind(this);
   }
   componentDidMount() {
-    this.setState({firstText: this.state.list[this.i]});
+    this.setState({firstText: this.list[this.i]});
     setInterval(this.changeTitle, 3000);
   }
   changeTitle() {
@@ -26,9 +27,9 @@ class WordCarousel extends React.Component {
     
     this.i++;
     if (this.current == 1) { // Currently, "first" is the current, "second" is moving in
-      this.setState({ secondText : this.state.list[this.i % this.state.list.length] });
+      this.setState({ secondText : this.list[this.i % this.list.length] });
     } else { // Currently, "second" is the current, "first" is moving in
-      this.setState({ firstText: this.state.list[this.i % this.state.list.length] });
+      this.setState({ firstText: this.list[this.i % this.list.length] });
     }
     this.current = this.current*-1;
     

@@ -3,6 +3,8 @@
   position: relative;
   height: 44px;
   width: 400px;
+  margin-bottom: -12px;
+  margin-left: 10px;
 }
 .title {
   position: absolute;
