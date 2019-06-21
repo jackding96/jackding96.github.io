@@ -3,16 +3,54 @@
   font-size: 15px;
   display: flex;
 }
+
+.linkContainer {
+  margin-right: 40px;
+}
+.emailLinkContainer {
+  position: relative;
+}
+.copied {
+  position: absolute;
+  color: rgb(0,122,255);
+  top: 40px;
+  left: 0px;
+  display:none;
+  opacity: 0;
+}
+.trigger {
+  display: block;
+  animation: flicker 1s ease;
+}
+@keyframes flicker {
+  0% {
+    top: 30px;
+    opacity: 0;
+  }
+  20% {
+    top: 20px;
+    opacity: 1;
+  }
+  80% {
+    top: 20px;
+    opacity: 1;
+  }
+  100% {
+    top: 30px;
+    opacity: 0;
+  }
+}
+
 a { 
   text-decoration: none;
   color: inherit;
   transition: all 0.1s ease;
 }
-
-.linkContainer {
-  margin-right: 30px;
-}
 a:hover {
   color: rgb(0,122,255);
   cursor: pointer;
+}
+.highlighted {
+  color: rgb(0,122,255);
+  cursor: pointer; 
 }
