@@ -10,8 +10,7 @@ class WordCarousel extends React.Component {
       secondPos: wordCarouselStyles.after,
       secondText: '',
     };
-
-    this.list = ['Software Engineer.', 'Code Connoisseur.', 'Technology Templar.', 'Binary Bandit.', 'Programming Pirate.', 'Algorithm Antihero.', 'Design Darth Vadar.', 'HPC Heavyweight.'];
+    this.list = props.words
     this.i = 0;
     this.current = 1;
 
