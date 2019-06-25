@@ -1,16 +1,19 @@
 .test {
   display: inline-block;
   position: relative;
-  height: 44px;
+  height: inherit;
   width: 400px;
-  margin-bottom: -13px;
-  margin-left: 8px;
+  /* height: calc((1em + 1vw) * 1.15); */
+  /* margin-bottom: -13px; */
+  /* margin-left: 8px; */
   color: rgb(0,122,255);
 }
 .title {
   position: absolute;
 }
-
+.dummy {
+  opacity: 0;
+}
 .current {
   opacity: 1;
   top: 0px;

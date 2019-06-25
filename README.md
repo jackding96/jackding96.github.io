@@ -1,6 +1,8 @@
 TODO:
 - Gradients based on time of day? Gradients around border animating
 - Make sizing work on mobile, responsive
+- Fix small spacing issue on word carousels
+- CSS-Gridify the main content block
 
 How To Deploy:
 - Make sure you're in the master-source branch
