@@ -1,0 +1,16 @@
+.container {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  max-width: 680px;
+}
+.contentLineContainer {
+  display:flex;
+  margin-bottom: 0.1em;
+}
+.contentLine {
+  margin-right: 10px;
+}
+.carouselContainer {
+  flex-grow:1;
+}

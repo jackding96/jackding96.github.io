@@ -1,12 +1,13 @@
 .test {
   display: inline-block;
   position: relative;
-  height: inherit;
-  width: 400px;
+  /* width: 400px; */
   /* height: calc((1em + 1vw) * 1.15); */
   /* margin-bottom: -13px; */
   /* margin-left: 8px; */
   color: rgb(0,122,255);
+  height: 100%;
+  width: 100%;
 }
 .title {
   position: absolute;
