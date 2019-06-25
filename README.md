@@ -1,7 +1,6 @@
 TODO:
 - Gradients based on time of day? Gradients around border animating
-- Get the 'copied' confirmation done
-- Get Domain name done
+- Make sizing work on mobile, responsive
 
 How To Deploy:
 - Make sure you're in the master-source branch
