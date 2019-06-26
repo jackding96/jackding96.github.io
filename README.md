@@ -3,6 +3,7 @@ TODO:
 - Make sizing work on mobile, responsive
 - Fix small spacing issue on word carousels
 - CSS-Gridify the main content block
+- Set script to automatically update CNAME
 
 How To Deploy:
 - Make sure you're in the master-source branch
